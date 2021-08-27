@@ -69,7 +69,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    align-items: center;
+
 
 }
 
@@ -136,31 +136,41 @@
     margin-right: 50px;
 }
 
-.contacts-link {
+.contact-links {
+    display: flex;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.contacts-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
     margin-left: auto;
-    /* margin-right: 50px; */
-    color: var(--main-text-color);
 }
 
-.contacts-link:not(:last-child) {
+.contact-link {
+    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+}
+
+.contact-link:not(:last-child) {
     margin-right: 50px;
+}
+
+.contacts-logo {
+    width: 16px;
+    height: 12px;
+    fill: var(--main-text-color);
+    margin-right: 10px;
 }
 
 .nav-link:hover,
 .nav-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
-    color: var(--akcent-color)
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:hover .contacts-logo,
+.contact-link:focus .contacts-logo {
+    color: var(--akcent-color);
+    fill: var(--akcent-color);
 }
 
 /* hero */
@@ -233,6 +243,18 @@
 /* .superiority-item:not(:last-child) {
     margin-right: 8px;;
 } */
+
+
+.superiority-ikon {
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .superiority-item {
     width: calc((100% - 30px) / 4);
@@ -307,6 +329,10 @@
 
 .team-item {
     width: calc((100% - 90px) / 4);
+    background-color: var(--secondary-title-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
 }
 
 .team-title {
@@ -342,6 +368,76 @@
     color: var(--main-text-color);
 }
 
+.social-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    background-color: var(--akcent-color);
+    border-radius: 50px;
+    fill: var(--secondary-title-color);
+}
+
+.social-icon {
+    fill: #AFB1B8;
+}
+
+.list-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin-top: 94px;
+    margin-bottom: 50px;
+}
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+}
+
+.client-item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.client-item:focus,
+.client-item:hover,
+.client-item:hover .client-logo,
+.client-item:focus .client-logo{
+    border-color: var(--akcent-color);
+    fill: var(--akcent-color);
+}
+
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-logo {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+
+
+
+
 /*--------------------------- footer -----------------------------*/
 .footer-all {
     display: flex;
@@ -350,7 +446,9 @@
     padding-bottom: 60px;
 }
 
-
+.d-flex {
+    display: flex;
+}
 
 .logo-footer {
     font-family: var(--secondary-font);
@@ -391,13 +489,36 @@ display: block;
     color: var(--akcent-color)
 }
 
+/* .container-footer {
+    display: inline-block;
+} */
+
+.footer-social-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    fill: #FFFFFF;
+}
+
 .footer-all {
     background-color: var(--secondary-background-color);
 }
 
+.footer-social {
+margin-left: 70px;
+align-items: unset;
+margin-top: 12px;
+}
 
-
-/* портфоліо */
+/*------------------ портфоліо -------------------------------*/
 
 .section-project {
     padding-top: 94px;
@@ -415,6 +536,11 @@ display: block;
 
 .filter-button-item {
     margin-right: 8px;
+}
+
+.filter-button-item:hover,
+.filter-button-item:focus {
+    color: white;
 }
 
 .filter-button-item:last-child {
@@ -469,7 +595,14 @@ display: block;
 
 .project-card:nth-child(3n + 3) {
     margin-right: 0;
-  } 
+} 
+
+.project-card:focus,
+.project-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
 
 .project-title {
     font-weight: 700;
