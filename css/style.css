@@ -149,7 +149,7 @@
 .contact-link {
     color: var(--main-text-color);
     display: flex;
-    align-items: center;
+
 }
 
 .contact-link:not(:last-child) {
@@ -158,9 +158,10 @@
 
 .contacts-logo {
     width: 16px;
-    height: 12px;
+    height: 17px;
     fill: var(--main-text-color);
     margin-right: 10px;
+
 }
 
 .nav-link:hover,
@@ -187,8 +188,8 @@
     text-align: center;
     max-width: 1600px;
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../images/bcg/bcg.jpg);
     background-repeat: no-repeat;
@@ -374,6 +375,12 @@
     margin-top: 16px;
 }
 
+.s-l:focus .social-icon{
+    background-color: var(--akcent-color);
+    border-radius: 50px;
+    fill: var(--secondary-title-color);
+}
+
 .social-icon:hover,
 .social-icon:focus {
     background-color: var(--akcent-color);
@@ -417,10 +424,23 @@
     justify-content: center;
 }
 
+.cl-link {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
 .client-item:focus,
+.cl-link:focus .client-logo{
+    border-color: var(--akcent-color);
+    fill: var(--akcent-color);
+}
+
+
 .client-item:hover,
-.client-item:hover .client-logo,
-.client-item:focus .client-logo{
+.client-item:hover .client-logo{
     border-color: var(--akcent-color);
     fill: var(--akcent-color);
 }
@@ -565,8 +585,12 @@ margin-top: 12px;
 .filter-button:hover,
 .filter-button:focus {
    background: var(--akcent-color);
-   color: var(--secondary-titel-color);
+   color: #FFFFFF;
 }
+
+
+
+
 
 .project-list {
     margin-top: 50px;
@@ -597,11 +621,17 @@ margin-top: 12px;
     margin-right: 0;
 } 
 
+
 .project-card:focus,
-.project-card:hover {
+.project-card:focus-visible {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
+
+.project-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 
 .project-title {
